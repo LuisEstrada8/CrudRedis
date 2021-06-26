@@ -1,0 +1,87 @@
+<nav class="navbar navbar-dark bg-light mb-5">
+  <a class="navbar-brand" style="margin-left: 15px;" href="#">Crud Redis</a>
+</nav>
+
+<div class="row justify-content-center align-items-center">
+  <div class="col-6">
+    <h4>Ingresar Usuario</h4>
+    <div class="widget mb-4">
+    <form #alumnGetForm="ngForm" (ngSubmit)="getAlumn(alumnoService.selectedAlum.uid)">               
+      <div class="form-group">
+        <input class="form-control" type="text" name="_id" placeholder="Ingrese uid" [(ngModel)]="alumnoService.selectedAlum.uid">
+      </div>
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-success">Buscar</button>
+    </div>
+    </form>
+    </div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Cumpleaños</th>
+      <th scope="col">Genero</th>
+      <th scope="col">Especialidad</th>
+      <th scope="col">Escuela</th>
+      <th scope="col">Ciudad de Nacimiento</th>
+    </tr>
+  </thead>  
+  <tbody>  
+    <tr class="table-info" *ngIf="arregloAlumnos">
+      <td>{{arregloAlumnos.name}}t</td>
+      <td>{{arregloAlumnos.age}}t</td>
+      <td>{{arregloAlumnos.birthday}}</td>
+      <td>{{arregloAlumnos.genre}}</td>
+      <td>{{arregloAlumnos.speciality}}</td>
+      <td>{{arregloAlumnos.school}}</td>
+      <td>{{arregloAlumnos.city_born}}t</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h4>Ingresar Usuario</h4>
+<div class="widget">
+<form #alumnForm="ngForm" (ngSubmit)="addAlumn(alumnForm)">               
+  <div class="form-group">
+    <input class="form-control" type="text" name="name" placeholder="Ingrese nombre" [(ngModel)]="alumnoService.selectedAlum.name">
+  </div>
+
+    <div class="form-group">
+      <input class="form-control" type="text" name="uid" placeholder="Ingrese el uid" [(ngModel)]="alumnoService.selectedAlum.uid">
+    </div>
+    
+    <div class="form-group">
+      <input type="text" name="age" placeholder="Ingrese su edad" [(ngModel)]="alumnoService.selectedAlum.age">
+    </div>
+    
+    <div class="form-group">
+      <input type="text" name="birthday" placeholder="Ingrese compleaños" [(ngModel)]="alumnoService.selectedAlum.birthday" >
+    </div>
+    
+    <div class="form-group">
+      <input type="text" name="genre" placeholder="Ingrese el Genero" [(ngModel)]="alumnoService.selectedAlum.genre">
+    </div>
+    
+    <div class="form-group">
+      <input type="text" name="speciality"  placeholder="Ingrese la especialidad" [(ngModel)]="alumnoService.selectedAlum.speciality">
+    </div>
+    
+    <div class="form-group">
+      <input type="text" name="school" placeholder="Ingrese su escuela" [(ngModel)]="alumnoService.selectedAlum.school">
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="city_born" placeholder="Ingrese su cuidad de nacimiento" [(ngModel)]="alumnoService.selectedAlum.city_born">
+    </div>
+
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-success">Enviar</button>
+    </div>
+</form>
+</div>
+
+  </div>
+</div>

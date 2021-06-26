@@ -1,0 +1,15 @@
+.widget form input[type="text"],form input[type="number"], .main .widget form textarea[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: "Nunito", sans-serif;
+    border: none;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .widget form input[type='text'] {
+    font-weight: 400;
+    border-radius: 12px;
+  }
+  
